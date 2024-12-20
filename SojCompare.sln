@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SojComparison", "SojComparison.pyproj", "{7899CFC9-0823-47C2-9CA6-3F0E5C72179E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7899CFC9-0823-47C2-9CA6-3F0E5C72179E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7899CFC9-0823-47C2-9CA6-3F0E5C72179E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34AB2A3C-1D19-4B16-8C64-ACD85DCF9BAC}
+	EndGlobalSection
+EndGlobal
