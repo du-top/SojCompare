@@ -1,7 +1,7 @@
 # About
 This project compares the source code of the Sojourn-13 project 
 (https://github.com/sojourn-13/sojourn-station) with its Wiki 
-(https://sojourn13.space/wiki) in certain topics, to make sure 
+(https://sojourn13.space/wiki/Main_Page) in certain topics, to make sure 
 that the documentation there is up to date. This comparison 
 consists of
 
