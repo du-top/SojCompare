@@ -20,6 +20,7 @@ class Comparison:
         self.wiki_title = ''
         self.ignored_files = []
         self.github_token = self.get_github_token()
+        self.canCreateOutput = False
 
     def get_github_token(self):
         path = 'githubtoken'
@@ -36,7 +37,9 @@ class Comparison:
 
         for code_entry in return_value.all_code_entries:
             if any(code_entry.equal_to(wiki_entry) for wiki_entry in return_value.all_wiki_entries) == False:
-                return_value.created_wiki_entries.append(self.create_wiki_entry(code_entry))
+                created_entry = self.create_wiki_entry(code_entry)
+                if created_entry is not None:
+                    return_value.created_wiki_entries.append(created_entry)
                 return_value.not_in_wiki_entries.append(code_entry)
 
         for wiki_entry in return_value.all_wiki_entries:
@@ -78,6 +81,9 @@ class Comparison:
             return
 
         print(message)
+
+    def create_output(self, result):
+        return
 
 class Entity:
     def __init__(self):

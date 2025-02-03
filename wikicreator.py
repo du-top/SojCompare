@@ -7,9 +7,7 @@ class Wikicreator:
 
     def createRecipeEntry(self, chem: Chem):
         output = []
-        output.append(f'<span id="{chem.name}"></span>')
-        output.append('|-')
-        output.append(f'!style=\'background-color:#B452CD;\'|{chem.name}<span style="color:{chem.color};background-color:white">▮</span>')
+        output.append(f'!style=\'background-color:#B452CD;\'|{chem.name}<span id="{chem.name}" style="color:{chem.color};background-color:white">▮</span>')
         output.append(f'|{self.createRecipe(chem.recipe)}')
         output.append(f'|{chem.description}')
         output.append(f'|{chem.metabolism}')
@@ -19,6 +17,9 @@ class Wikicreator:
         return "\n".join(output)
 
     def createRecipe(self, recipe):
+        if recipe is None:
+            return ''
+        
         output = []
         for ingred in recipe:
             output.append(f"{recipe[ingred]} part{'s' if recipe[ingred] == 0 else ''} {self.getchemname(ingred)}")

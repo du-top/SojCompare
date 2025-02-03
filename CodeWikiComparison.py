@@ -31,3 +31,7 @@ for key, result in results.items():
             print(code_item.to_string())
     print()
 
+for key, comparer in comparers.items():
+    if comparer.canCreateOutput:
+        comparer.create_output(results[key])
+

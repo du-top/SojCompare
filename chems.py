@@ -16,6 +16,7 @@ class ChemsComparison(Comparison):
         self.wiki_title = 'Guide_to_Chemistry'
         self.recipe_temp_dir = 'chem_recipes'
         self.recipe_source_dir = 'code/modules/reagents/recipes'
+        self.canCreateOutput = True
 
     def parse_source(self):
         self.download()
@@ -150,3 +151,16 @@ class ChemsComparison(Comparison):
         reaction.name = name
         return reaction
 
+    def create_wiki_entry(self, chem):
+        # skip chems without reciipe, as they are not listed in the wiki
+        if chem.recipe is None:
+            return None
+
+        creator = Wikicreator()
+        return creator.createRecipeEntry(chem)
+
+    def create_output(self, result):
+        with open('chems_output.txt', 'w', encoding='utf-8') as file:
+            for entry in result.created_wiki_entries:
+                file.write(entry)
+                file.write('\n')
