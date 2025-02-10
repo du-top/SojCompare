@@ -8,6 +8,7 @@ consists of
 - Perks
 - Chemicals
 - Psionic Powers
+- Drinks
 
 After the comparison, it shows what items exist in code, but 
 not in the wiki, and what items exist in the wiki, but aren't
@@ -47,6 +48,28 @@ as well.
 
 The project needs permission to create files and subdirectories
 in the directory in which it runs in.
+
+# Implementation
+The main file ```CodeWikiComparison.py``` initializes and calls different implementations of the ```Comparison``` class.
+They all compare the source code with a wiki page. Some provide more functions as that.
+
+## Psionics
+Creates and compares instances of the ```Power``` class.
+
+## Perks
+Creates and compares instances of the ```Perk``` class.
+
+## Chems
+Creates and compares instances of the ```Chem``` class.
+When the code is analyzed, another part of the code is downloaded and analyzed. That part contains the recipes to create chemicals.
+Only the ones with a recipe are relevant for the wiki. A text file with chemicals with recipe that are not defined in the wiki will
+be output to the file chems_output.txt in the correct wiki format.
+
+## Drinks
+Creates and compares instances of the ```Drink``` class.
+When the code is analyzed, another part of the code is downloaded and anlyzed. That part contains the recipes to create drinks.
+A text file with drinks that are not defined in the wiki will be output to the file drinks_output.txt, in the correct wiki format,
+although some columns of the wiki tables won't be used (strength in non-alocholic drinks, some descriptions).
 
 # Planned features
 There were first steps to create wiki table entries for missing
