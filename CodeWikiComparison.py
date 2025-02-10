@@ -1,11 +1,13 @@
 from chems import ChemsComparison
 from comparePerks import PerksComparison
+from drinks import DrinksComparison
 from psionics import PsionicsComparison
 
 comparers = {
     'Psionics': PsionicsComparison(),
     'Perks': PerksComparison(),
-    'Chems': ChemsComparison()
+    'Chems': ChemsComparison(),
+    'Drinks': DrinksComparison()
     }
 results = {}
 

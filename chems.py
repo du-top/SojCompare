@@ -152,7 +152,7 @@ class ChemsComparison(Comparison):
         return reaction
 
     def create_wiki_entry(self, chem):
-        # skip chems without reciipe, as they are not listed in the wiki
+        # skip chems without recipe, as they are not listed in the wiki
         if chem.recipe is None:
             return None
 

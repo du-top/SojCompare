@@ -26,6 +26,7 @@
     <Compile Include="CodeParser.py" />
     <Compile Include="CodeWikiComparison.py" />
     <Compile Include="Comparison.py" />
+    <Compile Include="drinks.py" />
     <Compile Include="githubdownload.py" />
     <Compile Include="comparePerks.py" />
     <Compile Include="psionics.py" />
